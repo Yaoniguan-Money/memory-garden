@@ -1,0 +1,40 @@
+name: Eval Case Proposal
+description: Propose a new Lab regression case
+labels: ["lab", "enhancement"]
+body:
+  - type: textarea
+    id: contract
+    attributes:
+      label: Contract
+      description: What behavioral contract should this case verify?
+      placeholder: "e.g., 'Compost records must reference the source seed ID'"
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: Lab Target
+      options:
+        - "seed"
+        - "court"
+        - "growth"
+        - "dream"
+        - "harvest"
+        - "runtime"
+        - "observatory"
+    validations:
+      required: true
+  - type: textarea
+    id: assertions
+    attributes:
+      label: Proposed Assertions
+      description: List of assertion types, field paths, and expected values.
+      placeholder: |
+        - equals: target=seed, path=status, expected=pending
+        - field_present: target=court, path=verdict
+  - type: textarea
+    id: example_snapshot
+    attributes:
+      label: Example Snapshot
+      description: Hand-crafted dict showing the expected behavior.
+      render: json

@@ -1,0 +1,12 @@
+{"query_id": "real-q01", "query": "对什么编程语言有偏好", "relevant_ids": ["bench-gold-101", "bench-gold-103", "bench-gold-102"], "language": "zh"}
+{"query_id": "real-q02", "query": "Atlas 发版文档该怎么组织", "relevant_ids": ["bench-gold-201", "bench-gold-202", "bench-gold-101"], "language": "zh"}
+{"query_id": "real-q03", "query": "Zephyr 环境出问题怎么回退", "relevant_ids": ["bench-gold-301", "bench-gold-302", "bench-gold-402"], "language": "zh"}
+{"query_id": "real-q04", "query": "排障时先看哪些长期记忆", "relevant_ids": ["bench-gold-401", "bench-gold-402", "bench-gold-103"], "language": "zh"}
+{"query_id": "real-q05", "query": "回答要简短还是详尽", "relevant_ids": ["bench-gold-102", "bench-gold-101", "bench-gold-202"], "language": "zh"}
+{"query_id": "real-q06", "query": "Atlas 有哪些安全红线", "relevant_ids": ["bench-gold-203", "bench-gold-201", "bench-gold-402"], "language": "zh"}
+{"query_id": "real-q07", "query": "UI 色调和布局倾向", "relevant_ids": ["bench-gold-104", "bench-gold-102", "bench-gold-101"], "language": "zh"}
+{"query_id": "real-q08", "query": "写文档用什么语气", "relevant_ids": ["bench-gold-102", "bench-gold-202", "bench-gold-601"], "language": "zh"}
+{"query_id": "real-q09", "query": "Zephyr 对客户的影响怎么交代", "relevant_ids": ["bench-gold-302", "bench-gold-301", "bench-gold-601"], "language": "zh"}
+{"query_id": "real-q10", "query": "能不能拿身份信息作答", "relevant_ids": ["bench-gold-501", "bench-gold-101", "bench-gold-104"], "language": "zh"}
+{"query_id": "real-q11", "query": "上线前 checklist 有哪些项", "relevant_ids": ["bench-gold-201", "bench-gold-301", "bench-gold-401"], "language": "zh"}
+{"query_id": "real-q12", "query": "用户一贯的稳定偏好", "relevant_ids": ["bench-gold-101", "bench-gold-102", "bench-gold-104"], "language": "zh"}

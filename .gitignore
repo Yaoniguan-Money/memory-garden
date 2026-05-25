@@ -1,0 +1,67 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.tox/
+.nox/
+.cache/
+.env
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*_state.json
+provider_config.json
+.memory_garden/
+.memory_garden*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.key
+.claude/
+.codex_tmp/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+pip-wheel-metadata/
+site/
+
+# Benchmark 临时输出
+benchmarks/retrieval/last_run.json
+
+# Local build artifacts
+/memory_garden.egg-info/
+*.egg-info/
+/dist/
+/build/
+
+# Root planning drafts (not versioned)
+/第一层.txt
+/第二层.txt
+/第三层.txt
+/第四层.txt
+/第五层.txt
+/第六层.txt
+/第七层.txt
+/第八层.txt
+/第九层.txt
+
+# Benchmark temporary directories
+.benchmark_*/
+.benchmark_tmp/
+
+# Personal IDE/editor review files
+cursor_*.md
+codex_*.md
+
+# Generated report images
+docs/reports/*.png

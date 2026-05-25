@@ -1,0 +1,34 @@
+name: Memory Policy Question
+description: Ask a question about memory policy, safety, or Covenant behavior
+labels: ["policy", "question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions about what Memory Garden should or should not do with sensitive content,
+        how the Covenant should evolve, or edge cases in memory policy.
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Describe the memory policy scenario you're asking about.
+    validations:
+      required: true
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+      description: What does Memory Garden currently do in this scenario?
+  - type: textarea
+    id: desired_behavior
+    attributes:
+      label: Desired or Questioned Behavior
+      description: What should it do? Or what are the trade-offs?
+  - type: dropdown
+    id: hard_baseline
+    attributes:
+      label: Hard Baseline?
+      options:
+        - "Yes - this should be non-overridable"
+        - "No - this should be configurable"
+        - "Unsure"

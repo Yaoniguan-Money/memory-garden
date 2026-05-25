@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/Yaoniguan-Money/memory-garden/blob/main/docs/index.md
+    about: Read the docs before opening a general usage question.
+  - name: Security Policy
+    url: https://github.com/Yaoniguan-Money/memory-garden/blob/main/SECURITY.md
+    about: Report security issues privately using the guidance in SECURITY.md.
+  - name: Roadmap
+    url: https://github.com/Yaoniguan-Money/memory-garden/blob/main/ROADMAP.md
+    about: Check current scope and planned directions before filing feature requests.

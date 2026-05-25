@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Memory Garden Contributors"
+title: "Memory Garden: local-first, auditable memory layer for AI agents"
+version: 1.4.0
+date-released: 2026-05-17
+url: "https://github.com/Yaoniguan-Money/memory-garden"
+repository-code: "https://github.com/Yaoniguan-Money/memory-garden"
+license: MIT
+keywords:
+  - "ai agents"
+  - "memory"
+  - "local-first"
+  - "retrieval"
+  - "auditability"

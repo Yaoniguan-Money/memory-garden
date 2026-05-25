@@ -1,0 +1,107 @@
+[
+  {
+    "id": "bench-gold-101",
+    "title": "编程语言偏好",
+    "essence": "用户偏好 Python 和 TypeScript，喜欢稳定工具链",
+    "tags": ["preference", "python", "typescript"],
+    "memory_type": "preference"
+  },
+  {
+    "id": "bench-gold-102",
+    "title": "写作风格偏好",
+    "essence": "用户喜欢简洁但完整的写作风格",
+    "tags": ["preference", "writing"],
+    "memory_type": "preference"
+  },
+  {
+    "id": "bench-gold-103",
+    "title": "调试流程",
+    "essence": "调试时先运行最小相关测试，再跑全量测试",
+    "tags": ["procedural", "debug", "testing"],
+    "memory_type": "procedural"
+  },
+  {
+    "id": "bench-gold-104",
+    "title": "界面偏好",
+    "essence": "用户偏好深色界面和紧凑布局",
+    "tags": ["preference", "ui", "dark_mode"],
+    "memory_type": "preference"
+  },
+  {
+    "id": "bench-gold-201",
+    "title": "Atlas 发布说明",
+    "essence": "Atlas 项目发布说明必须包含回滚步骤",
+    "tags": ["project", "atlas", "release"],
+    "memory_type": "project"
+  },
+  {
+    "id": "bench-gold-202",
+    "title": "Atlas 客户沟通",
+    "essence": "Atlas 客户沟通需要先写风险再写收益",
+    "tags": ["project", "atlas", "communication"],
+    "memory_type": "procedural"
+  },
+  {
+    "id": "bench-gold-203",
+    "title": "Atlas 安全边界",
+    "essence": "Atlas 项目不能发送敏感客户数据给外部模型",
+    "tags": ["project", "atlas", "safety"],
+    "memory_type": "boundary"
+  },
+  {
+    "id": "bench-gold-301",
+    "title": "Zephyr 发布 checklist",
+    "essence": "Zephyr 工作区发布 checklist 包含客户影响和回滚",
+    "tags": ["workspace", "zephyr", "release"],
+    "memory_type": "project"
+  },
+  {
+    "id": "bench-gold-302",
+    "title": "Zephyr 客户影响说明",
+    "essence": "Zephyr 客户影响说明需要列出受影响模块",
+    "tags": ["workspace", "zephyr", "communication"],
+    "memory_type": "procedural"
+  },
+  {
+    "id": "bench-gold-401",
+    "title": "实现任务流程",
+    "essence": "实现任务先改代码再补测试，最后跑全量测试",
+    "tags": ["procedural", "implementation", "testing"],
+    "memory_type": "procedural"
+  },
+  {
+    "id": "bench-gold-402",
+    "title": "敏感信息边界",
+    "essence": "不要泄露 API key token password 或其他敏感信息",
+    "tags": ["safety", "boundary", "security"],
+    "memory_type": "boundary"
+  },
+  {
+    "id": "bench-gold-501",
+    "title": "用户身份",
+    "essence": "用户是开发者，关注开源 beta 质量",
+    "tags": ["identity", "developer"],
+    "memory_type": "identity"
+  },
+  {
+    "id": "bench-gold-601",
+    "title": "NDCG 评估概念",
+    "essence": "NDCG 用于评估排序质量，越接近一越好",
+    "tags": ["semantic", "evaluation"],
+    "memory_type": "reflection"
+  },
+  {
+    "id": "bench-gold-701",
+    "title": "Legacy 发布流程",
+    "essence": "Legacy 项目使用旧发布流程",
+    "tags": ["project", "legacy", "deprecated"],
+    "memory_type": "project"
+  },
+  {
+    "id": "bench-gold-801",
+    "title": "临时会议记录",
+    "essence": "一次临时会议提到发布流程可能变化",
+    "tags": ["workspace", "archive", "episodic"],
+    "memory_type": "reflection"
+  }
+]

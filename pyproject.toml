@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61", "wheel>=0.40"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-garden"
+version = "1.4.0"
+requires-python = ">=3.10"
+description = "记忆花园 Memory Garden: local-first, auditable memory layer for AI agents, also usable as a memory skill"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "记忆花园 Memory Garden Contributors"},
+]
+keywords = [
+    "ai",
+    "memory",
+    "agent",
+    "local-first",
+    "audit",
+    "privacy",
+    "offline",
+    "sqlite",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pydantic>=2.0,<3",
+    "PyYAML>=6.0,<7",
+]
+
+[project.urls]
+Homepage = "https://github.com/Yaoniguan-Money/memory-garden"
+Repository = "https://github.com/Yaoniguan-Money/memory-garden"
+Documentation = "https://github.com/Yaoniguan-Money/memory-garden/blob/main/docs/index.md"
+Issues = "https://github.com/Yaoniguan-Money/memory-garden/issues"
+
+[project.optional-dependencies]
+ann = ["hnswlib>=0.8"]
+jieba = ["jieba>=0.42"]
+embeddings = ["sentence-transformers>=2.2.0"]
+dev = ["pytest>=7.0", "coverage>=7.0"]
+bench = [
+    "chromadb>=0.4",
+    "faiss-cpu>=1.7",
+    "matplotlib>=3.7",
+    "psutil>=5.9",
+]
+docs = [
+    "mkdocs>=1.5",
+    "mkdocs-material>=9.0",
+]
+# Optional extras for users who want to build their own integrations.
+# These are NOT installed by default and are NOT required for the core library.
+fastapi = ["fastapi>=0.100", "uvicorn>=0.20"]
+langgraph = ["langgraph>=0.0.20"]
+llm = ["openai>=1.0", "anthropic>=0.20"]
+
+[project.scripts]
+memory-garden = "memory_garden.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["memory_garden*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore:integrations.providers.ProviderRegistry:DeprecationWarning",
+]

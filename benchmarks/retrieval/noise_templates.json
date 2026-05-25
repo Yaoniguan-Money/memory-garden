@@ -1,0 +1,902 @@
+[
+  {
+    "title": "Atlas 会议纪要 v1-001",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 1，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 v1-002",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 2，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 v1-003",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 3，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 v1-004",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 4，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 v1-005",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 5，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 v1-006",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 6，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 v1-007",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 7，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 v1-008",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 8，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 v1-009",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 9，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 v1-010",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 10，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 v2-011",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 11，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 v2-012",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 12，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 v2-013",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 13，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 v2-014",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 14，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 v2-015",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 15，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 v2-016",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 16，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 v2-017",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 17，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 v2-018",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 18，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 v2-019",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 19，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 v2-020",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 20，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 v3-021",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 21，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 v3-022",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 22，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 v3-023",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 23，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 v3-024",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 24，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 v3-025",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 25，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 v3-026",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 26，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 v3-027",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 27，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 v3-028",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 28，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 v3-029",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 29，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 v3-030",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 30，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 draft-031",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 31，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 draft-032",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 32，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 draft-033",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 33，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 draft-034",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 34，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 draft-035",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 35，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 draft-036",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 36，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 draft-037",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 37，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 draft-038",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 38，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 draft-039",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 39，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 draft-040",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 40，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 notes-041",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 41，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 notes-042",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 42，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 notes-043",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 43，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 notes-044",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 44，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 notes-045",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 45，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 notes-046",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 46，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 notes-047",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 47，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 notes-048",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 48，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 notes-049",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 49，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 notes-050",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 50，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 backup-051",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 51，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 backup-052",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 52，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 backup-053",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 53，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 backup-054",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 54，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 backup-055",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 55，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 backup-056",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 56，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 backup-057",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 57，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 backup-058",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 58，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 backup-059",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 59，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 backup-060",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 60，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 old-061",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 61，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 old-062",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 62，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 old-063",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 63，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 old-064",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 64，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 old-065",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 65，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 old-066",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 66，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 old-067",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 67，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 old-068",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 68，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 old-069",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 69，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 old-070",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 70，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 temp-071",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 71，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 temp-072",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 72，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 temp-073",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 73，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 temp-074",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 74，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 temp-075",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 75，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 temp-076",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 76，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 temp-077",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 77，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 temp-078",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 78，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 temp-079",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 79，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 temp-080",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 80，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 misc-081",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 81，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 misc-082",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 82，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 misc-083",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 83，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 misc-084",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 84，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 misc-085",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 85，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 misc-086",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 86，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 misc-087",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 87，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 misc-088",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 88，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 misc-089",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 89，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 misc-090",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 90，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Atlas 会议纪要 extra-091",
+    "essence": "Atlas 团队讨论了 Python 依赖升级与界面主题，但未涉及发布说明（噪声条目 91，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Zephyr 站会记录 extra-092",
+    "essence": "Zephyr 工作区提到 TypeScript 重构进度，与客户影响无关（噪声条目 92，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "Python 版本讨论 extra-093",
+    "essence": "团队评估 Python 3.12 迁移，不涉及用户语言偏好（噪声条目 93，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "界面配色草案 extra-094",
+    "essence": "设计稿比较浅色与深色界面，尚未定稿（噪声条目 94，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "发布窗口安排 extra-095",
+    "essence": "运维安排发布窗口，未写 checklist 细节（噪声条目 95，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "回滚演练记录 extra-096",
+    "essence": "演练回滚脚本，与 Zephyr 流程无直接关系（噪声条目 96，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "API 文档草稿 extra-097",
+    "essence": "API 文档提到 token 字段说明，非安全边界记忆（噪声条目 97，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "测试覆盖率报告 extra-098",
+    "essence": "全量测试覆盖率 78%，与调试流程偏好无关（噪声条目 98，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "开源 beta 讨论 extra-099",
+    "essence": "讨论开源 beta 宣传文案，非身份记忆（噪声条目 99，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  },
+  {
+    "title": "NDCG 论文笔记 extra-100",
+    "essence": "阅读 NDCG 论文摘要，与排序评估概念弱相关（噪声条目 100，共享 Atlas/Zephyr/Python/发布/界面 等词汇）",
+    "tags": [
+      "noise",
+      "benchmark"
+    ],
+    "memory_type": "reflection"
+  }
+]

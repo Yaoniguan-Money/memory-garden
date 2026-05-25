@@ -1,0 +1,768 @@
+{
+  "synthetic": {
+    "noise_ratio": 0.9,
+    "total_memories": 500,
+    "total_queries": 20,
+    "k_values": [
+      5
+    ],
+    "baselines": [
+      {
+        "baseline": "fts5",
+        "k": 5,
+        "recall_at_k": 0.3999999999999999,
+        "precision_at_k": 0.24000000000000007,
+        "hit_at_k": 0.85,
+        "ndcg_at_k": 0.41471927452440027,
+        "mrr": 0.71,
+        "map_at_k": 0.2866666666666667,
+        "r_precision": 0.2333333333333333,
+        "latency_ms_avg": 3.190815002017189,
+        "latency_p50_ms": 2.9844999953638762,
+        "latency_p95_ms": 4.116199997952208,
+        "latency_p99_ms": 4.5479999971576035,
+        "throughput_qps": 313.399554461106,
+        "total_queries": 20,
+        "quality_summary": null,
+        "failure_summary": {
+          "failed_query_count": 20,
+          "total_missed_relevant": 36,
+          "examples": [
+            {
+              "query_id": "q01",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-103"
+              ],
+              "ranked_top_k": [
+                "bench-gold-101",
+                "bench-gold-101-v01",
+                "bench-gold-101-v02",
+                "bench-gold-101-v03",
+                "bench-gold-104"
+              ]
+            },
+            {
+              "query_id": "q02",
+              "missed_relevant_ids": [
+                "bench-gold-101"
+              ],
+              "ranked_top_k": [
+                "bench-gold-201",
+                "bench-gold-201-v01",
+                "bench-gold-201-v02",
+                "bench-gold-201-v03",
+                "bench-gold-202"
+              ]
+            },
+            {
+              "query_id": "q03",
+              "missed_relevant_ids": [
+                "bench-gold-302",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-301",
+                "bench-gold-301-v01",
+                "bench-gold-301-v02",
+                "bench-gold-501",
+                "bench-gold-102"
+              ]
+            },
+            {
+              "query_id": "q04",
+              "missed_relevant_ids": [
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-401",
+                "bench-gold-401-v01",
+                "bench-gold-401-v02",
+                "bench-gold-103",
+                "bench-gold-103-v01"
+              ]
+            },
+            {
+              "query_id": "q05",
+              "missed_relevant_ids": [
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-gold-102",
+                "bench-gold-102-v01",
+                "bench-gold-102-v02",
+                "bench-gold-102-v03",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "q06",
+              "missed_relevant_ids": [
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-203",
+                "bench-gold-203-v01",
+                "bench-gold-203-v02",
+                "bench-gold-701",
+                "bench-gold-201"
+              ]
+            },
+            {
+              "query_id": "q07",
+              "missed_relevant_ids": [
+                "bench-gold-102"
+              ],
+              "ranked_top_k": [
+                "bench-gold-501",
+                "bench-gold-501-v01",
+                "bench-gold-501-v02",
+                "bench-gold-104",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "q08",
+              "missed_relevant_ids": [
+                "bench-gold-202",
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-102",
+                "bench-gold-102-v01",
+                "bench-gold-102-v02",
+                "bench-gold-102-v03",
+                "bench-gold-401"
+              ]
+            },
+            {
+              "query_id": "q09",
+              "missed_relevant_ids": [
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-302",
+                "bench-gold-302-v01",
+                "bench-gold-302-v02",
+                "bench-gold-301",
+                "bench-gold-301-v01"
+              ]
+            },
+            {
+              "query_id": "q10",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-104",
+                "bench-gold-501"
+              ],
+              "ranked_top_k": [
+                "bench-gold-402",
+                "bench-gold-402-v01",
+                "bench-gold-402-v02",
+                "bench-gold-601",
+                "bench-gold-601-v01"
+              ]
+            }
+          ]
+        },
+        "cold_start_ms": 0.0,
+        "meta": {
+          "name": "fts5",
+          "provider": "none",
+          "mode": "no_llm",
+          "network_calls": false,
+          "cost_per_1k_queries": 0.0
+        }
+      },
+      {
+        "baseline": "product",
+        "k": 5,
+        "recall_at_k": 0.4333333333333333,
+        "precision_at_k": 0.26000000000000006,
+        "hit_at_k": 0.9,
+        "ndcg_at_k": 0.4540155840719911,
+        "mrr": 0.775,
+        "map_at_k": 0.3166666666666667,
+        "r_precision": 0.2666666666666666,
+        "latency_ms_avg": 165.25559500150848,
+        "latency_p50_ms": 173.44519999460317,
+        "latency_p95_ms": 203.74769999762066,
+        "latency_p99_ms": 208.67079999879934,
+        "throughput_qps": 6.05123233492259,
+        "total_queries": 20,
+        "quality_summary": {
+          "query_count": 20,
+          "truncated_count": 20,
+          "candidate_sources": {
+            "fts": 20
+          },
+          "fallback_reasons": [],
+          "scanned_count_total": 2412,
+          "latency_buckets": {
+            "lt_200ms": 15,
+            "lt_50ms": 2,
+            "lt_500ms": 3
+          },
+          "latency_ms_avg": 165.25559500150848
+        },
+        "failure_summary": {
+          "failed_query_count": 20,
+          "total_missed_relevant": 34,
+          "examples": [
+            {
+              "query_id": "q01",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-103"
+              ],
+              "ranked_top_k": [
+                "bench-gold-101",
+                "bench-gold-101-v01",
+                "bench-gold-101-v02",
+                "bench-gold-101-v03",
+                "bench-gold-104"
+              ]
+            },
+            {
+              "query_id": "q02",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-gold-201",
+                "bench-gold-201-v01",
+                "bench-gold-201-v02",
+                "bench-gold-201-v03",
+                "bench-gold-203"
+              ]
+            },
+            {
+              "query_id": "q03",
+              "missed_relevant_ids": [
+                "bench-gold-302",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-301",
+                "bench-gold-301-v01",
+                "bench-gold-301-v02",
+                "bench-noise-0002",
+                "bench-noise-0012"
+              ]
+            },
+            {
+              "query_id": "q04",
+              "missed_relevant_ids": [
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-401",
+                "bench-gold-401-v01",
+                "bench-gold-401-v02",
+                "bench-gold-103",
+                "bench-gold-103-v01"
+              ]
+            },
+            {
+              "query_id": "q05",
+              "missed_relevant_ids": [
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-gold-102",
+                "bench-gold-102-v01",
+                "bench-gold-102-v02",
+                "bench-gold-102-v03",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "q06",
+              "missed_relevant_ids": [
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-203",
+                "bench-gold-203-v01",
+                "bench-gold-203-v02",
+                "bench-gold-201",
+                "bench-noise-0007"
+              ]
+            },
+            {
+              "query_id": "q07",
+              "missed_relevant_ids": [
+                "bench-gold-102"
+              ],
+              "ranked_top_k": [
+                "bench-gold-104",
+                "bench-gold-104-v01",
+                "bench-gold-104-v02",
+                "bench-gold-104-v03",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "q08",
+              "missed_relevant_ids": [
+                "bench-gold-202",
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-102",
+                "bench-gold-102-v01",
+                "bench-gold-102-v02",
+                "bench-gold-102-v03",
+                "bench-gold-401"
+              ]
+            },
+            {
+              "query_id": "q09",
+              "missed_relevant_ids": [
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-302",
+                "bench-gold-302-v01",
+                "bench-gold-302-v02",
+                "bench-gold-301",
+                "bench-gold-301-v01"
+              ]
+            },
+            {
+              "query_id": "q10",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-104",
+                "bench-gold-501"
+              ],
+              "ranked_top_k": [
+                "bench-gold-402",
+                "bench-gold-402-v01",
+                "bench-gold-402-v02",
+                "bench-gold-601",
+                "bench-gold-601-v01"
+              ]
+            }
+          ]
+        },
+        "cold_start_ms": 0.0,
+        "meta": {
+          "name": "product",
+          "provider": "none",
+          "mode": "no_llm",
+          "network_calls": false,
+          "cost_per_1k_queries": 0.0
+        }
+      }
+    ],
+    "dataset_name": "medium",
+    "metadata": {
+      "version": "1.4.0",
+      "date": "2026-05-25",
+      "machine": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel / Windows",
+      "python": "3.10.4",
+      "dataset": "medium",
+      "total_memories": 500,
+      "total_queries": 20,
+      "noise_ratio": 0.9
+    }
+  },
+  "real": {
+    "noise_ratio": 0.9,
+    "total_memories": 500,
+    "total_queries": 12,
+    "k_values": [
+      5
+    ],
+    "baselines": [
+      {
+        "baseline": "fts5",
+        "k": 5,
+        "recall_at_k": 0.2222222222222222,
+        "precision_at_k": 0.13333333333333333,
+        "hit_at_k": 0.5,
+        "ndcg_at_k": 0.2744413383033131,
+        "mrr": 0.5,
+        "map_at_k": 0.20555555555555552,
+        "r_precision": 0.19444444444444442,
+        "latency_ms_avg": 2.997375000025689,
+        "latency_p50_ms": 2.9060999950161204,
+        "latency_p95_ms": 4.066199995577335,
+        "latency_p99_ms": 4.066199995577335,
+        "throughput_qps": 333.62525542897686,
+        "total_queries": 12,
+        "quality_summary": null,
+        "failure_summary": {
+          "failed_query_count": 12,
+          "total_missed_relevant": 28,
+          "examples": [
+            {
+              "query_id": "real-q01",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-103"
+              ],
+              "ranked_top_k": [
+                "bench-gold-101",
+                "bench-gold-101-v01",
+                "bench-gold-101-v02",
+                "bench-gold-101-v03",
+                "bench-gold-104"
+              ]
+            },
+            {
+              "query_id": "real-q02",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-201",
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-noise-0007",
+                "bench-noise-0017",
+                "bench-noise-0027",
+                "bench-noise-0037",
+                "bench-noise-0047"
+              ]
+            },
+            {
+              "query_id": "real-q03",
+              "missed_relevant_ids": [
+                "bench-gold-301",
+                "bench-gold-302",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": []
+            },
+            {
+              "query_id": "real-q04",
+              "missed_relevant_ids": [
+                "bench-gold-103",
+                "bench-gold-401",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-noise-0009",
+                "bench-noise-0019",
+                "bench-noise-0029",
+                "bench-noise-0039",
+                "bench-noise-0049"
+              ]
+            },
+            {
+              "query_id": "real-q05",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-102",
+                "bench-gold-202"
+              ],
+              "ranked_top_k": []
+            },
+            {
+              "query_id": "real-q06",
+              "missed_relevant_ids": [
+                "bench-gold-201",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-203",
+                "bench-gold-203-v01",
+                "bench-gold-203-v02",
+                "bench-noise-0007",
+                "bench-noise-0017"
+              ]
+            },
+            {
+              "query_id": "real-q07",
+              "missed_relevant_ids": [
+                "bench-gold-102"
+              ],
+              "ranked_top_k": [
+                "bench-gold-104",
+                "bench-gold-104-v01",
+                "bench-gold-104-v02",
+                "bench-gold-104-v03",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "real-q08",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-202",
+                "bench-gold-202-v01",
+                "bench-gold-202-v02",
+                "bench-noise-0007",
+                "bench-noise-0017"
+              ]
+            },
+            {
+              "query_id": "real-q09",
+              "missed_relevant_ids": [
+                "bench-gold-301",
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-302",
+                "bench-gold-302-v01",
+                "bench-gold-302-v02",
+                "bench-gold-102",
+                "bench-gold-102-v01"
+              ]
+            },
+            {
+              "query_id": "real-q10",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-104",
+                "bench-gold-501"
+              ],
+              "ranked_top_k": [
+                "bench-gold-402",
+                "bench-gold-402-v01",
+                "bench-gold-402-v02",
+                "bench-gold-203",
+                "bench-gold-203-v01"
+              ]
+            }
+          ]
+        },
+        "cold_start_ms": 0.0,
+        "meta": {
+          "name": "fts5",
+          "provider": "none",
+          "mode": "no_llm",
+          "network_calls": false,
+          "cost_per_1k_queries": 0.0
+        }
+      },
+      {
+        "baseline": "product",
+        "k": 5,
+        "recall_at_k": 0.3333333333333333,
+        "precision_at_k": 0.20000000000000004,
+        "hit_at_k": 0.6666666666666666,
+        "ndcg_at_k": 0.3667857368062489,
+        "mrr": 0.611111111111111,
+        "map_at_k": 0.2703703703703703,
+        "r_precision": 0.24999999999999997,
+        "latency_ms_avg": 283.8574999962778,
+        "latency_p50_ms": 164.30389999004547,
+        "latency_p95_ms": 775.5242999992333,
+        "latency_p99_ms": 775.5242999992333,
+        "throughput_qps": 3.5228944100934902,
+        "total_queries": 12,
+        "quality_summary": {
+          "query_count": 12,
+          "truncated_count": 9,
+          "candidate_sources": {
+            "fts": 9,
+            "fallback": 3
+          },
+          "fallback_reasons": [
+            "fts_empty_results",
+            "fts_empty_results",
+            "fts_empty_results"
+          ],
+          "scanned_count_total": 2064,
+          "latency_buckets": {
+            "lt_200ms": 7,
+            "gte_500ms": 3,
+            "lt_500ms": 1,
+            "lt_50ms": 1
+          },
+          "latency_ms_avg": 283.8574999962778
+        },
+        "failure_summary": {
+          "failed_query_count": 12,
+          "total_missed_relevant": 24,
+          "examples": [
+            {
+              "query_id": "real-q01",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-103"
+              ],
+              "ranked_top_k": [
+                "bench-gold-101",
+                "bench-gold-101-v01",
+                "bench-gold-101-v02",
+                "bench-gold-101-v03",
+                "bench-gold-104"
+              ]
+            },
+            {
+              "query_id": "real-q02",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-201",
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-noise-0007",
+                "bench-noise-0017",
+                "bench-noise-0027",
+                "bench-noise-0037",
+                "bench-noise-0047"
+              ]
+            },
+            {
+              "query_id": "real-q03",
+              "missed_relevant_ids": [
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-301",
+                "bench-gold-301-v01",
+                "bench-gold-302-v01",
+                "bench-gold-302",
+                "bench-gold-302-v02"
+              ]
+            },
+            {
+              "query_id": "real-q04",
+              "missed_relevant_ids": [
+                "bench-gold-103",
+                "bench-gold-401",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-noise-0009",
+                "bench-noise-0019",
+                "bench-noise-0029",
+                "bench-noise-0039",
+                "bench-noise-0049"
+              ]
+            },
+            {
+              "query_id": "real-q05",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-102",
+                "bench-gold-202"
+              ],
+              "ranked_top_k": [
+                "bench-gold-402-v02",
+                "bench-gold-402-v01",
+                "bench-gold-402",
+                "bench-gold-701",
+                "bench-gold-203"
+              ]
+            },
+            {
+              "query_id": "real-q06",
+              "missed_relevant_ids": [
+                "bench-gold-201",
+                "bench-gold-402"
+              ],
+              "ranked_top_k": [
+                "bench-gold-203",
+                "bench-gold-203-v01",
+                "bench-gold-203-v02",
+                "bench-noise-0007",
+                "bench-noise-0017"
+              ]
+            },
+            {
+              "query_id": "real-q07",
+              "missed_relevant_ids": [
+                "bench-gold-102"
+              ],
+              "ranked_top_k": [
+                "bench-gold-104",
+                "bench-gold-104-v01",
+                "bench-gold-104-v02",
+                "bench-gold-104-v03",
+                "bench-gold-101"
+              ]
+            },
+            {
+              "query_id": "real-q08",
+              "missed_relevant_ids": [
+                "bench-gold-102",
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-202",
+                "bench-gold-202-v01",
+                "bench-noise-0007",
+                "bench-gold-202-v02",
+                "bench-noise-0017"
+              ]
+            },
+            {
+              "query_id": "real-q09",
+              "missed_relevant_ids": [
+                "bench-gold-601"
+              ],
+              "ranked_top_k": [
+                "bench-gold-302",
+                "bench-gold-302-v01",
+                "bench-gold-302-v02",
+                "bench-gold-301",
+                "bench-gold-301-v01"
+              ]
+            },
+            {
+              "query_id": "real-q10",
+              "missed_relevant_ids": [
+                "bench-gold-101",
+                "bench-gold-104",
+                "bench-gold-501"
+              ],
+              "ranked_top_k": [
+                "bench-gold-402",
+                "bench-gold-402-v01",
+                "bench-gold-402-v02",
+                "bench-gold-203",
+                "bench-gold-203-v01"
+              ]
+            }
+          ]
+        },
+        "cold_start_ms": 0.0,
+        "meta": {
+          "name": "product",
+          "provider": "none",
+          "mode": "no_llm",
+          "network_calls": false,
+          "cost_per_1k_queries": 0.0
+        }
+      }
+    ],
+    "dataset_name": "medium",
+    "metadata": {
+      "version": "1.4.0",
+      "date": "2026-05-25",
+      "machine": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel / Windows",
+      "python": "3.10.4",
+      "dataset": "medium",
+      "total_memories": 500,
+      "total_queries": 12,
+      "noise_ratio": 0.9
+    }
+  },
+  "comparison_rows": [
+    {
+      "baseline": "fts5",
+      "recall_synthetic": 0.3999999999999999,
+      "recall_real": 0.2222222222222222,
+      "recall_delta_real_minus_syn": -0.1777777777777777,
+      "ndcg_synthetic": 0.41471927452440027,
+      "ndcg_real": 0.2744413383033131
+    },
+    {
+      "baseline": "product",
+      "recall_synthetic": 0.4333333333333333,
+      "recall_real": 0.3333333333333333,
+      "recall_delta_real_minus_syn": -0.09999999999999998,
+      "ndcg_synthetic": 0.4540155840719911,
+      "ndcg_real": 0.3667857368062489
+    }
+  ]
+}

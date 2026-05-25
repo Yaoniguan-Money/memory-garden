@@ -1,0 +1,99 @@
+garden_covenant:
+  version: 1
+  consent:
+    default_state: closed
+    open_commands: ["花花开", "/garden on"]
+    close_commands: ["花花关", "/garden off"]
+    memorize_commands: false
+    session_scope: current_session
+    require_explicit_open: true
+    stop_observing_on_close: true
+    stop_harvesting_on_close: true
+  memory_admission:
+    allow_long_term_preferences: true
+    allow_user_decisions: true
+    allow_stable_collaboration_style: true
+    allow_ai_self_memory: false
+    require_user_adoption_signal: true
+    ignore_smalltalk_by_default: true
+    control_commands_never_memorized: true
+    adoption_signals: ["我认可", "按这个来", "就这样", "采纳", "accepted", "use this"]
+    rejection_signals: ["这个不要", "你理解错了", "不要这样", "reject", "not this"]
+  emotional_safety:
+    prevent_negative_identity_lock: true
+    negative_emotion_default_action: compost_or_hold
+    hard_forget_overrides_compost: true
+    forbidden_identity_phrases: ["一无是处", "我很失败", "我没用", "I am useless", "I am a failure", "I'm a failure"]
+    compost_allowed_for_negative_emotion: true
+    require_soft_language_for_emotional_memory: true
+  sensitive_memory:
+    greenhouse_default_for_sensitive: true
+    greenhouse_excluded_from_harvest: true
+    greenhouse_hidden_in_reports: true
+    greenhouse_hidden_in_exports: true
+    greenhouse_hidden_from_llm_judge: true
+    allow_greenhouse_abstract_hint: true
+    allow_greenhouse_raw_text_in_debug: false
+  model_calls:
+    allow_external_llm: true
+    allow_external_embedding: false
+    allow_external_reranker: false
+    allow_full_garden_context: false
+    allow_greenhouse_raw_text: false
+    allow_hard_forgotten_text: false
+    require_selected_context_only: true
+    record_model_calls: true
+    require_prompt_hash: true
+    max_memories_per_model_call: 8
+    allowed_model_call_purposes:
+      - memory_lens
+      - brief_writer
+      - llm_judge
+      - rerank
+      - seed_extraction
+      - dream_reflection
+      - court_argument
+  harvest:
+    brief_token_budget: 600
+    max_selected_memories: 8
+    require_source_memory_ids: true
+    allow_unsupported_user_preference_instruction: false
+    pruned_memory_allowed_slots: ["avoid"]
+    compost_allowed_slots: ["safety", "nudge"]
+    greenhouse_allowed_slots: []
+    require_avoid_slot_for_rejected_direction: true
+    enable_twig_boost: true
+    enable_avoid_retrieval: true
+  visibility:
+    feedback_mode: closing_only
+    debug_can_show_trace: true
+    debug_can_show_policy_decisions: true
+    debug_can_show_redacted_text: false
+    report_hide_greenhouse_raw_text: true
+    report_hide_redacted_text: true
+    report_hide_hard_forgotten_text: true
+    snapshot_allow_abstract_summary: true
+  portability:
+    export_api_keys: false
+    export_greenhouse_raw_text: false
+    export_redacted_text: false
+    export_hard_forgotten_text: false
+    export_model_call_details: false
+    import_requires_checksum: true
+    hard_forget_deletes_embeddings: true
+    hard_forget_deletes_fts: true
+    hard_forget_redacts_traces: true
+    keep_minimal_forget_audit: true
+  hard_baselines:
+    hard_forgotten_never_visible: true
+    commands_never_memorized: true
+    unsupported_user_preference_never_in_brief: true
+    hard_forget_overrides_compost: true
+    ai_self_memory_requires_user_adoption: true
+    external_model_never_receives_full_garden_by_default: true
+    api_keys_never_exported: true
+  audit:
+    record_policy_decisions: true
+    record_blocked_operations: true
+    include_covenant_hash: true
+    max_recent_decisions: 50

@@ -1,0 +1,8 @@
+graph TD
+    A["FTS5 原始<br/>40% recall · 3ms · 0规则"] -->|"CJK ngram 修复<br/>中文从0%复活"| B["FTS5 CJK<br/>40% recall · 3ms · 312 QPS"]
+    B -->|"+ 规则评分管线<br/>+3pp · 可解释"| C["Product 规则<br/>43% recall · 553ms"]
+    C -->|"+ 特征向量<br/>回溯力增强"| D["+ 特征评分<br/>43% recall · 539ms"]
+    D -->|"+ 候选截断+预分词+NumPy<br/>-48%延迟"| E["+ 组合优化<br/>43% recall · 260ms"]
+    E -->|"+ 写入时索引<br/>token/embed预计算"| F["当前<br/>43% recall · 164ms<br/>累计-70%延迟"]
+    style A fill:#f0f0f0
+    style F fill:#4caf50,color:#fff

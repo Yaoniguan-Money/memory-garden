@@ -1,0 +1,20 @@
+{"query_id": "q01", "query": "用户偏好什么编程语言？", "relevant_ids": ["bench-gold-101", "bench-gold-103", "bench-gold-102"]}
+{"query_id": "q02", "query": "Atlas 项目发布说明怎么写？", "relevant_ids": ["bench-gold-201", "bench-gold-202", "bench-gold-101"]}
+{"query_id": "q03", "query": "Zephyr 工作区的回滚流程是什么？", "relevant_ids": ["bench-gold-301", "bench-gold-302", "bench-gold-402"]}
+{"query_id": "q04", "query": "调试任务应该优先参考哪些记忆？", "relevant_ids": ["bench-gold-401", "bench-gold-402", "bench-gold-103"]}
+{"query_id": "q05", "query": "用户喜欢简洁还是详细？", "relevant_ids": ["bench-gold-102", "bench-gold-101", "bench-gold-202"]}
+{"query_id": "q06", "query": "Atlas 项目安全边界有哪些？", "relevant_ids": ["bench-gold-203", "bench-gold-201", "bench-gold-402"]}
+{"query_id": "q07", "query": "前端界面偏好是什么？", "relevant_ids": ["bench-gold-104", "bench-gold-102", "bench-gold-101"]}
+{"query_id": "q08", "query": "写作任务应该采用什么风格？", "relevant_ids": ["bench-gold-102", "bench-gold-202", "bench-gold-601"]}
+{"query_id": "q09", "query": "Zephyr 客户影响说明怎么处理？", "relevant_ids": ["bench-gold-302", "bench-gold-301", "bench-gold-601"]}
+{"query_id": "q10", "query": "身份相关信息能否用于回答？", "relevant_ids": ["bench-gold-501", "bench-gold-101", "bench-gold-104"]}
+{"query_id": "q11", "query": "发布 checklist 需要哪些步骤？", "relevant_ids": ["bench-gold-201", "bench-gold-301", "bench-gold-401"]}
+{"query_id": "q12", "query": "长期稳定偏好是什么？", "relevant_ids": ["bench-gold-101", "bench-gold-102", "bench-gold-104"]}
+{"query_id": "q13", "query": "过期的候选记忆应该排前吗？", "relevant_ids": ["bench-gold-701", "bench-gold-801", "bench-gold-401"]}
+{"query_id": "q14", "query": "工作区通用流程怎么做？", "relevant_ids": ["bench-gold-301", "bench-gold-401", "bench-gold-601"]}
+{"query_id": "q15", "query": "项目规划应该参考什么？", "relevant_ids": ["bench-gold-202", "bench-gold-201", "bench-gold-301"]}
+{"query_id": "q16", "query": "代码实现时的安全要求？", "relevant_ids": ["bench-gold-402", "bench-gold-203", "bench-gold-401"]}
+{"query_id": "q17", "query": "用户是否偏好深色界面？", "relevant_ids": ["bench-gold-104", "bench-gold-101", "bench-gold-102"]}
+{"query_id": "q18", "query": "Atlas 的客户沟通风格？", "relevant_ids": ["bench-gold-202", "bench-gold-201", "bench-gold-601"]}
+{"query_id": "q19", "query": "Zephyr 的发布 checklist？", "relevant_ids": ["bench-gold-301", "bench-gold-302", "bench-gold-401"]}
+{"query_id": "q20", "query": "哪些记忆不应该用于当前项目？", "relevant_ids": ["bench-gold-701", "bench-gold-801", "bench-gold-501"]}

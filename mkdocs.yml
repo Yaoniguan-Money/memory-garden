@@ -1,0 +1,82 @@
+﻿site_name: Memory Garden
+site_description: Local-first, auditable memory layer for AI agents
+repo_url: https://github.com/Yaoniguan-Money/memory-garden
+not_in_nav: |
+  integration_quickstart.md
+  explanation/comparison.md
+  explanation/flower_commands.md
+  explanation/pydantic_models.md
+  explanation/skill_privacy_model.md
+  explanation/sqlite.md
+  how_to/agent_brief_injection_demo.md
+  how_to/configure_skill.md
+  how_to/forget_memory.md
+  how_to/run_policy_audit.md
+  how_to/run_tests.md
+  how_to/test_structure.md
+  how_to/use_memory_garden_skill.md
+  reference/skill_api.md
+  release/**
+  reports/**
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Installation: installation.md
+  - Concepts: concepts.md
+  - Architecture: architecture.md
+  - Tutorials:
+      - tutorials/index.md
+      - First Session: tutorials/first_session.md
+  - How-To Guides:
+      - how_to/index.md
+      - Integrate Sync Agent: how_to/integrate_sync_agent.md
+      - Integrate Async Agent: how_to/integrate_async_agent.md
+      - Strategy-Filtered Retrieval: how_to/use_strategy_filtered_retrieval.md
+      - Control Brief Injection: how_to/control_brief_injection.md
+      - Configure Covenant: how_to/configure_covenant.md
+      - Run Lab Smoke Tests: how_to/run_lab_smoke.md
+      - Run Lab Safety Tests: how_to/run_lab_safety.md
+      - Add a Lab Case: how_to/add_lab_case.md
+  - Reference:
+      - reference/index.md
+  - Explanation:
+      - explanation/index.md
+      - Garden Metaphor: explanation/garden_metaphor.md
+      - Rule-Based Design: explanation/rule_based.md
+      - Local-First: explanation/local_first.md
+      - No Vector DB: explanation/no_vector_db.md
+      - Ten Layers: explanation/nine_layers.md
+      - Covenant: explanation/covenant.md
+      - Limitations: explanation/limitations.md
+      - Related Work: explanation/related_work.md
+  - Architecture Docs:
+      - Overview: architecture.md
+      - Garden Life Core: architecture/garden_life_core.md
+      - Garden Runtime: architecture/garden_runtime.md
+      - Harvest Pipeline: architecture/harvest_pipeline.md
+      - Garden Observatory: architecture/garden_observatory.md
+      - Integration Layer: architecture/integration_layer.md
+      - Garden Lab: architecture/garden_lab.md
+      - Lab Cookbook: architecture/lab_cookbook.md
+      - Garden Covenant: architecture/garden_covenant.md
+      - Skill Layer: architecture/skill_layer.md
+      - Garden Soil: architecture/garden_soil.md
+  - Project:
+      - Real Provider Trial: release/real_provider_trial_checklist.md
+      - CHANGELOG: https://github.com/Yaoniguan-Money/memory-garden/blob/main/CHANGELOG.md
+      - ROADMAP: https://github.com/Yaoniguan-Money/memory-garden/blob/main/ROADMAP.md
+      - Contributing: https://github.com/Yaoniguan-Money/memory-garden/blob/main/CONTRIBUTING.md
+      - Security: https://github.com/Yaoniguan-Money/memory-garden/blob/main/SECURITY.md
+      - License: https://github.com/Yaoniguan-Money/memory-garden/blob/main/LICENSE
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+

@@ -1,0 +1,66 @@
+{
+  "dataset": "medium",
+  "total_memories": 500,
+  "total_queries": 20,
+  "noise_ratio": 0.9,
+  "k": 5,
+  "gold_template_count": 15,
+  "systems": [
+    {
+      "name": "Memory Garden FTS5",
+      "recall_at_5": 0.3999999999999999,
+      "ndcg_at_5": 0.41471927452440027,
+      "latency_p50_ms": 3.09140000899788,
+      "latency_p95_ms": 3.7834000104339793,
+      "memory_mb": 431.9,
+      "dependencies": 2,
+      "network_calls": 0,
+      "co2_g": 0.0,
+      "embedding_model": "none (FTS5 CJK ngram)",
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "name": "Memory Garden Product",
+      "recall_at_5": 0.4333333333333333,
+      "ndcg_at_5": 0.4540155840719911,
+      "latency_p50_ms": 175.81470000732224,
+      "latency_p95_ms": 190.18799999321345,
+      "memory_mb": 433.9,
+      "dependencies": 2,
+      "network_calls": 0,
+      "co2_g": 0.0,
+      "embedding_model": "rules-only",
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "name": "ChromaDB",
+      "recall_at_5": 0.33333333333333337,
+      "ndcg_at_5": 0.3724059537877865,
+      "latency_p50_ms": 176.83949999627657,
+      "latency_p95_ms": 184.53139999473933,
+      "memory_mb": 506.4,
+      "dependencies": 134,
+      "network_calls": 0,
+      "co2_g": 0.0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "name": "FAISS Flat",
+      "recall_at_5": 0.2833333333333333,
+      "ndcg_at_5": 0.34046325098716285,
+      "latency_p50_ms": 6.8641999969258904,
+      "latency_p95_ms": 7.429299992509186,
+      "memory_mb": 663.3,
+      "dependencies": 134,
+      "network_calls": 0,
+      "co2_g": 0.0,
+      "embedding_model": "BAAI/bge-small-zh-v1.5",
+      "status": "ok",
+      "note": ""
+    }
+  ]
+}

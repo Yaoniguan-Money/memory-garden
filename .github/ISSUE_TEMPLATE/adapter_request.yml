@@ -1,0 +1,31 @@
+name: Adapter Request
+description: Request a new integration adapter or protocol
+labels: ["integration", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request a new chat adapter or integration protocol. Note: adapters that require
+        LLM provider SDKs as hard dependencies will not be added to the core package.
+  - type: input
+    id: framework
+    attributes:
+      label: Framework or Pattern
+      description: What framework, pattern, or language feature needs an adapter?
+      placeholder: "e.g., LangGraph, streaming, callback-based"
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Describe the integration scenario.
+    validations:
+      required: true
+  - type: checkboxes
+    id: deps
+    attributes:
+      label: Dependency Check
+      options:
+        - label: This adapter can be implemented without adding new required dependencies
+        - label: If dependencies are needed, they can be optional extras

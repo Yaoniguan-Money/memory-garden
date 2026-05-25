@@ -1,0 +1,7 @@
+interface:
+  display_name: "记忆花园 Memory Garden"
+  short_description: "面向本地优先 Agent 的产品级记忆层，支持提案、检索、遗忘和审计。"
+  default_prompt: "Use $memory-garden to propose, approve, retrieve, evolve, manage, or forget local agent memories in 记忆花园 Memory Garden with strategy and audit proof."
+
+policy:
+  allow_implicit_invocation: true
