@@ -66,6 +66,100 @@ Adapter CLI 默认保持 rules-only。只有在你明确希望它们从环境变
 export MEMORY_GARDEN_ENABLE_PROVIDER_AUTOLOAD=1
 ```
 
+## 作为 Codex Skill 安装
+
+可分发的 skill 位于 `packaging/codex-skills/memory-garden`。这个 skill 不内置 Python 包本体，所以要先在 agent host 使用的 Python 环境里安装 `memory-garden`：
+
+```bash
+pip install memory-garden
+```
+
+如果是从当前仓库做本地开发：
+
+```bash
+python -m pip install -e . --no-deps
+```
+
+然后把 skill 目录复制到 Codex 的 skill 发现目录。
+
+PowerShell：
+
+```powershell
+$skills = "$env:USERPROFILE\.codex\skills"
+New-Item -ItemType Directory -Force -Path $skills | Out-Null
+Copy-Item -Recurse -Force ".\packaging\codex-skills\memory-garden" "$skills\memory-garden"
+python "$skills\memory-garden\scripts\memory_garden_skill_smoke.py"
+```
+
+macOS/Linux：
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R packaging/codex-skills/memory-garden ~/.codex/skills/memory-garden
+python ~/.codex/skills/memory-garden/scripts/memory_garden_skill_smoke.py
+```
+
+这个 skill 默认是显式触发（`allow_implicit_invocation: false`）。在新的 Codex 会话里直接点名使用：
+
+```text
+Use $memory-garden to retrieve relevant local memory before answering this task.
+Use $memory-garden to propose a memory from this note, but do not approve it yet.
+Use $memory-garden to forget memory id <id> and report the proof.
+```
+
+## 其它程序如何接入
+
+如果你的程序自己控制对话循环，优先使用 Python SDK。为每个应用选择一个仓库外的 garden home，并确保不要把 `.memory_garden/`、数据库或 provider 配置提交到 Git。
+
+```python
+from memory_garden.sdk import MemoryGarden
+
+garden = MemoryGarden.local("./.memory_garden")
+skill = garden.as_skill()
+
+try:
+    skill.open_session()
+
+    # 可审核写入：只生成提案，不直接写入长期记忆。
+    proposals = skill.propose_memory("remember: prefer concise release notes")
+    if proposals:
+        card = skill.approve_memory_proposal(proposals[0].id)
+
+    # 可信写入：仅在你的应用策略允许自动批准时使用。
+    result = skill.remember_memory(
+        "remember: prefer dark mode dashboards",
+        mode="trusted",
+    )
+
+    query = "How should I format this release note?"
+    brief = skill.build_memory_brief(
+        query,
+        context={"project_id": "atlas", "task_type": "writing"},
+    )
+
+    messages = [
+        {"role": "system", "content": brief.use},
+        {"role": "user", "content": query},
+    ]
+    assistant_reply = call_your_model(messages)
+    skill.after(query, assistant_reply)
+finally:
+    garden.close()
+```
+
+如果你想把它包在每次模型调用前后：
+
+```python
+ctx = skill.before(
+    user_message,
+    messages=[{"role": "user", "content": user_message}],
+)
+assistant_reply = call_your_model(ctx.messages)
+skill.after(user_message, assistant_reply)
+```
+
+默认路径是本地 rules-only：不会调用 LLM、embedding、reranker 或任何网络 provider。如果你的应用拥有外部 provider，需要用 `ProviderRegistry` 和显式 opt-in 的 `ProviderPolicy` 注册，不要在 skill 文件或示例里硬编码 API key。
+
 ## 会话口令
 
 - `花花开` 用于打开会话。

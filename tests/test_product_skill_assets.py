@@ -6,6 +6,7 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
+EXTERNAL_SKILL = ROOT / "packaging" / "codex-skills" / "memory-garden"
 
 
 def _read_skill_frontmatter() -> tuple[dict, str]:
@@ -67,13 +68,35 @@ def test_openai_agent_metadata_is_valid() -> None:
 
     assert payload["interface"]["display_name"] == "记忆花园 Memory Garden"
     assert "$memory-garden" in payload["interface"]["default_prompt"]
-    assert payload["policy"]["allow_implicit_invocation"] is True
+    assert payload["policy"]["allow_implicit_invocation"] is False
 
 
-def test_memory_garden_skill_smoke_script() -> None:
+def test_external_skill_package_is_minimal_and_synced() -> None:
+    expected_files = {
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/api.md",
+        "references/privacy-and-safety.md",
+        "references/storage-and-health.md",
+        "references/troubleshooting.md",
+        "scripts/memory_garden_skill_smoke.py",
+    }
+
+    actual_files = {
+        path.relative_to(EXTERNAL_SKILL).as_posix()
+        for path in EXTERNAL_SKILL.rglob("*")
+        if path.is_file()
+    }
+
+    assert actual_files == expected_files
+    for rel in expected_files:
+        assert (EXTERNAL_SKILL / rel).read_text(encoding="utf-8") == (ROOT / rel).read_text(encoding="utf-8")
+
+
+def test_memory_garden_skill_smoke_script(tmp_path: Path) -> None:
     result = subprocess.run(
-        [sys.executable, "scripts/memory_garden_skill_smoke.py"],
-        cwd=ROOT,
+        [sys.executable, str(ROOT / "scripts" / "memory_garden_skill_smoke.py")],
+        cwd=tmp_path,
         text=True,
         capture_output=True,
         timeout=60,

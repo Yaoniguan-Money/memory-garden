@@ -125,6 +125,106 @@ Adapter CLIs stay rules-only by default. If you explicitly want them to auto-loa
 provider credentials from environment variables or local `provider_config.json`,
 set `MEMORY_GARDEN_ENABLE_PROVIDER_AUTOLOAD=1` for that session.
 
+## Install as a Codex Skill
+
+The distributable skill lives in `packaging/codex-skills/memory-garden`. The
+skill does not vendor the Python package, so install `memory-garden` in the
+Python environment used by your agent host first:
+
+```bash
+pip install memory-garden
+```
+
+For local development from this repository:
+
+```bash
+python -m pip install -e . --no-deps
+```
+
+Then copy the skill folder into Codex's skill discovery directory.
+
+PowerShell:
+
+```powershell
+$skills = "$env:USERPROFILE\.codex\skills"
+New-Item -ItemType Directory -Force -Path $skills | Out-Null
+Copy-Item -Recurse -Force ".\packaging\codex-skills\memory-garden" "$skills\memory-garden"
+python "$skills\memory-garden\scripts\memory_garden_skill_smoke.py"
+```
+
+macOS/Linux:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R packaging/codex-skills/memory-garden ~/.codex/skills/memory-garden
+python ~/.codex/skills/memory-garden/scripts/memory_garden_skill_smoke.py
+```
+
+The skill is explicit by default (`allow_implicit_invocation: false`). In a new
+Codex session, call it directly:
+
+```text
+Use $memory-garden to retrieve relevant local memory before answering this task.
+Use $memory-garden to propose a memory from this note, but do not approve it yet.
+Use $memory-garden to forget memory id <id> and report the proof.
+```
+
+## Use From Another Program
+
+Use the Python SDK when your application owns the conversation loop. Choose a
+garden home outside the repository and keep it out of Git.
+
+```python
+from memory_garden.sdk import MemoryGarden
+
+garden = MemoryGarden.local("./.memory_garden")
+skill = garden.as_skill()
+
+try:
+    skill.open_session()
+
+    # Reviewable write: creates proposals only.
+    proposals = skill.propose_memory("remember: prefer concise release notes")
+    if proposals:
+        card = skill.approve_memory_proposal(proposals[0].id)
+
+    # Trusted write: use only when your app policy allows auto-approval.
+    result = skill.remember_memory(
+        "remember: prefer dark mode dashboards",
+        mode="trusted",
+    )
+
+    query = "How should I format this release note?"
+    brief = skill.build_memory_brief(
+        query,
+        context={"project_id": "atlas", "task_type": "writing"},
+    )
+
+    messages = [
+        {"role": "system", "content": brief.use},
+        {"role": "user", "content": query},
+    ]
+    assistant_reply = call_your_model(messages)
+    skill.after(query, assistant_reply)
+finally:
+    garden.close()
+```
+
+For a hook-style integration around each model call:
+
+```python
+ctx = skill.before(
+    user_message,
+    messages=[{"role": "user", "content": user_message}],
+)
+assistant_reply = call_your_model(ctx.messages)
+skill.after(user_message, assistant_reply)
+```
+
+By default this is local and rules-only: no LLM, embedding, reranker, or network
+provider is called. If your application owns external providers, register them
+explicitly with `ProviderRegistry` and an opt-in `ProviderPolicy`.
+
 ## Integration
 
 Claude Code:

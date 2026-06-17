@@ -41,6 +41,27 @@ if TYPE_CHECKING:
     from memory_garden.skill import GardenSkill
 
 
+class _DefaultRuleBasedAgent:
+    """Package-internal fallback agent used when callers do not attach one."""
+
+    __slots__ = ("calls",)
+
+    def __init__(self) -> None:
+        self.calls: list[tuple[str, str]] = []
+
+    def generate_assistant_reply(
+        self,
+        *,
+        user_message: str,
+        session_id: str,
+        extra_context: str | None = None,
+    ) -> str:
+        self.calls.append((user_message, session_id))
+        has_context = bool(extra_context and extra_context.strip())
+        context_label = "with memory context" if has_context else "without memory context"
+        return f"[demo agent reply {context_label}: {user_message[:50]}]"
+
+
 class MemoryGarden:
     """Unified SDK entry point for the complete Memory Garden stack.
 
@@ -335,8 +356,7 @@ class MemoryGarden:
 
     def _get_adapter(self) -> SyncGardenChatAdapter:
         if self._adapter is None:
-            from examples.sync_chat_agent import RuleBasedDemoAgent
-            agent = self._host_agent or RuleBasedDemoAgent()
+            agent = self._host_agent or _DefaultRuleBasedAgent()
             self._adapter = SyncGardenChatAdapter(
                 agent=agent,
                 runtime=self._runtime,
