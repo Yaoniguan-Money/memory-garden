@@ -1,11 +1,13 @@
 import json
 import sqlite3
+from types import SimpleNamespace
 
 import pytest
 
 from memory_garden.core.growth.lifecycle import MemoryLifecycle
 from memory_garden.core.models import MemoryCard, SeedStatus, SensitivityLevel
 from memory_garden.product import MemoryListFilter, MemoryPatch, MemoryProposalStatus, ProductMemorySystem
+from memory_garden.product.services.forget import _redact_proof_metadata
 from memory_garden.providers import FakeEmbeddingProvider, ProviderPolicy, ProviderRegistry
 from memory_garden.sdk import MemoryGarden
 from memory_garden.storage.base import NotFoundError
@@ -233,6 +235,45 @@ def test_product_duplicate_relation_merge_and_forget_proof(tmp_path):
         assert proof.content_probe_fingerprint
     finally:
         garden.close()
+
+
+def test_product_forget_proof_metadata_removes_plaintext_probe_queries(tmp_path):
+    garden, product = _product(tmp_path)
+    try:
+        marker = "proof-redaction-unique-quartz-marker"
+        card = product.approve(product.propose(f"remember: {marker}")[0].id)
+        plan = product.plan_forget(memory_id=card.id)
+        _, proof = product.execute_forget(plan.id)
+
+        def contains_queries_key(value):
+            if isinstance(value, dict):
+                return "queries" in value or any(contains_queries_key(item) for item in value.values())
+            if isinstance(value, list):
+                return any(contains_queries_key(item) for item in value)
+            return False
+
+        assert proof.proven is True
+        assert contains_queries_key(proof.metadata) is False
+        assert marker not in json.dumps(proof.metadata, ensure_ascii=False)
+    finally:
+        garden.close()
+
+
+def test_redact_proof_metadata_strips_queries_from_check_evidence():
+    proof = SimpleNamespace(
+        model_dump=lambda **_: {
+            "checks": [
+                {
+                    "surface": "search_content_probe",
+                    "evidence": {"queries": ["private plaintext probe"], "matches": 0},
+                }
+            ]
+        }
+    )
+
+    payload = _redact_proof_metadata(proof, content_probes=None)
+
+    assert payload["checks"][0]["evidence"] == {"matches": 0}
 
 
 def test_product_forget_facade_behavior_unchanged_after_service_extract(tmp_path):

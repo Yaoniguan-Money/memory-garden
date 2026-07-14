@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import random
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -39,6 +40,7 @@ class BenchmarkGarden:
     noise_ratio: float
     cases: list[BenchmarkCase]
     dataset_name: str = "small"
+    seed: int | None = None
 
     def close(self) -> None:
         self.repository.close()
@@ -99,6 +101,7 @@ def build_benchmark_garden(
     cases: list[BenchmarkCase] | None = None,
     reindex: bool = True,
     dataset_name: str = "small",
+    seed: int | None = None,
 ) -> BenchmarkGarden:
     """写入 gold + noise 记忆并可选重建 FTS5 索引。"""
     spec = DATASET_SPECS.get(dataset_name)
@@ -130,13 +133,19 @@ def build_benchmark_garden(
         if noise_count is None:
             noise_count = compute_noise_count(len(gold_specs), noise_ratio)
 
-    for item in gold_specs:
-        repo.save_memory_card(_memory_card_from_spec(item, memory_id=item["id"]))
-
+    cards: list[MemoryCard] = [
+        _memory_card_from_spec(item, memory_id=item["id"])
+        for item in gold_specs
+    ]
     for idx in range(noise_count):
         template = noise_templates[idx % len(noise_templates)]
         noise_id = f"bench-noise-{idx + 1:04d}"
-        repo.save_memory_card(_memory_card_from_spec(template, memory_id=noise_id))
+        cards.append(_memory_card_from_spec(template, memory_id=noise_id))
+
+    if seed is not None:
+        random.Random(seed).shuffle(cards)
+    for card in cards:
+        repo.save_memory_card(card)
 
     if reindex:
         reindex_garden(home.root, dry_run=False)
@@ -152,6 +161,7 @@ def build_benchmark_garden(
         noise_ratio=ratio,
         cases=cases,
         dataset_name=dataset_name,
+        seed=seed,
     )
 
 

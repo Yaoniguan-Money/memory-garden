@@ -240,7 +240,7 @@ def test_restricted_card_long_essence_not_in_runtime_garden_brief(
     lifecycle: MemoryLifecycle,
     gh_stack: GardenHarvester,
 ) -> None:
-    secret = "COMPOST_BODY_SECRET_UNIQUE_88441"
+    secret = "test-only-placeholder"
     m = _card(
         title="标签耦合",
         essence=secret + "后缀说明",

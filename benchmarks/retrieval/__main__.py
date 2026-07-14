@@ -14,6 +14,7 @@ def main() -> None:
     parser.add_argument("--dataset", default="small", help="tiny|small|medium|large|xlarge")
     parser.add_argument("--garden-home", default=".benchmark_garden", help="临时 garden 目录")
     parser.add_argument("--k", type=int, default=5, help="Recall@k 的 k")
+    parser.add_argument("--seed", type=int, default=None, help="可选插入顺序种子")
     parser.add_argument(
         "--baselines",
         default="default",
@@ -35,6 +36,7 @@ def main() -> None:
         k_values=[args.k],
         dataset_name=args.dataset,
         baseline_names=baseline_names,
+        seed=args.seed,
     )
     try:
         payload = report.to_v2_json()
