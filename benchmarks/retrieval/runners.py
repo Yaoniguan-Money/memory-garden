@@ -363,6 +363,8 @@ def run_benchmark_on_garden(
         total_queries=len(garden.cases),
         noise_ratio=garden.noise_ratio,
     )
+    if garden.seed is not None:
+        metadata["seed"] = garden.seed
     return BenchmarkReport(
         noise_ratio=garden.noise_ratio,
         total_memories=garden.total_memories,
@@ -381,11 +383,13 @@ def run_benchmark(
     k_values: list[int] | None = None,
     dataset_name: str = "small",
     baseline_names: list[str] | None = None,
+    seed: int | None = None,
 ) -> tuple[BenchmarkReport, BenchmarkGarden]:
     garden = build_benchmark_garden(
         garden_home,
         noise_ratio=noise_ratio,
         dataset_name=dataset_name,
+        seed=seed,
     )
     report = run_benchmark_on_garden(
         garden,

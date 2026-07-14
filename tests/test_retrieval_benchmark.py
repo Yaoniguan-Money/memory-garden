@@ -12,6 +12,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from benchmarks.retrieval.dataset import (
+    build_benchmark_garden,
     build_mini_benchmark_garden,
     compute_noise_count,
     load_cases,
@@ -151,3 +152,20 @@ def test_full_benchmark_smoke(tmp_path):
         assert product_k5.recall_at_k > 0.0
     finally:
         garden.close()
+
+
+def test_seeded_garden_records_seed_and_preserves_card_set(tmp_path):
+    first = build_benchmark_garden(tmp_path / "seed-a", dataset_name="tiny", seed=104729)
+    second = build_benchmark_garden(tmp_path / "seed-b", dataset_name="tiny", seed=130363)
+    try:
+        first_ids = {card.id for card in first.repository.list_memory_cards(limit=100)}
+        second_ids = {card.id for card in second.repository.list_memory_cards(limit=100)}
+        assert first.seed == 104729
+        assert second.seed == 130363
+        assert first_ids == second_ids
+
+        report = run_benchmark_on_garden(first, k_values=[5], baseline_names=["fts5"])
+        assert report.metadata["seed"] == 104729
+    finally:
+        first.close()
+        second.close()
