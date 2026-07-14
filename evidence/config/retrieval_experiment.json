@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "seeds": [104729, 130363, 155921],
+  "datasets": ["small", "medium"],
+  "k": 5,
+  "baselines": ["fts5", "product", "product_local_embed"],
+  "query_dataset": "evidence/datasets/retrieval_queries.jsonl",
+  "query_design_note": "100 manually curated independent questions: 90 positive/boundary/conflict cases and 10 no-answer negatives. Labels were assigned from the memory catalog, not generated from retrieval implementation logic."
+}

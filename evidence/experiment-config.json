@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project": "Memory Garden",
+  "run_date": "2026-07-14",
+  "experiments": {
+    "retrieval": "config/retrieval_experiment.json",
+    "hard_forget": "config/hard_forget_experiment.json",
+    "mutation": {
+      "script": "../scripts/run_mutation_evidence.py",
+      "mutants": 4,
+      "focused_tests": [
+        "tests/test_forget_proof.py",
+        "tests/test_forget_content_proof.py",
+        "tests/test_product_memory_system.py"
+      ]
+    },
+    "full_test_suite": {
+      "path": "tests",
+      "branch_coverage": true,
+      "cache_provider_disabled": true
+    }
+  },
+  "classification": {
+    "retrieval": "synthetic, manually curated labels, offline",
+    "hard_forget": "synthetic, offline; real SQLite/FTS/Product paths; fake embedding provider only for cache-surface exercise",
+    "tests": "unit/integration, deterministic fake providers where provider isolation is required"
+  }
+}

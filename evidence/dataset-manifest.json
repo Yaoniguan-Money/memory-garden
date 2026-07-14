@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "retrieval_queries": {
+    "path": "datasets/retrieval_queries.jsonl",
+    "sha256": "202536529DF12799D1959C8130CAB30F1018F8E083DAF78519B306E1BF37DD32",
+    "rows": 100,
+    "unique_query_ids": 100,
+    "unique_query_texts": 100,
+    "positive_boundary_conflict_rows": 90,
+    "no_answer_negative_rows": 10,
+    "source": "Manually curated from the fixed 15-memory catalog; labels do not import or execute retrieval implementation logic."
+  },
+  "memory_catalog": {
+    "path": "../benchmarks/retrieval/gold_memories.json",
+    "sha256": "86A4B79DC3C7CA30EAEA13833C44A5C7B48621E132F0AA5711C7222644CEEDF4",
+    "base_memories": 15,
+    "medium_scale_note": "The existing benchmark deterministically expands catalog variants to 50 gold memories."
+  },
+  "noise_templates": {
+    "path": "../benchmarks/retrieval/noise_templates.json",
+    "sha256": "B56B8DB399392F86F303B0B3A052119EE97B8DBDA3A5B0A0830D6A787517748F",
+    "small": "85 noise + 15 gold = 100 memories",
+    "medium": "450 noise + 50 gold = 500 memories"
+  },
+  "retrieval_config": {
+    "path": "config/retrieval_experiment.json",
+    "sha256": "7587A55A892F9ACC3E52E40EB38C9D1E1E9FFE92C79261C2EA07C982A4878789"
+  },
+  "hard_forget_config": {
+    "path": "config/hard_forget_experiment.json",
+    "sha256": "4F8317E71E168811E643AE61C0A39466A57A2CF08284B6BACF288F7DAB7C9D7C"
+  }
+}

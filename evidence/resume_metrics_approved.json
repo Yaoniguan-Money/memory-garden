@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "project": "Memory Garden",
+  "approved": [
+    {
+      "id": "memory-retrieval-medium-product-v1",
+      "tier": "A",
+      "metric": "Recall@5 and NDCG@5 on the medium retrieval condition",
+      "baseline": "FTS5",
+      "current": "Product retrieval",
+      "result": {
+        "recall_at_5_baseline": 0.7018518518518518,
+        "recall_at_5_current": 0.7351851851851853,
+        "recall_delta_percentage_points": 3.333333333333348,
+        "ndcg_at_5_baseline": 0.6190249459034374,
+        "ndcg_at_5_current": 0.6370110645716518,
+        "ndcg_delta_percentage_points": 1.798611866821436,
+        "p50_latency_ms_baseline": 2.5648666667924167,
+        "p50_latency_ms_current": 194.17079999993803,
+        "negative_false_positive_rate_both": 0.9
+      },
+      "sample": "100 independent labeled queries per seed: 90 positive/boundary/conflict and 10 no-answer negatives; 500 memories with 90% noise",
+      "repetitions": "3 fixed insertion-order seeds; 300 query executions per baseline",
+      "mode": "offline synthetic, manually curated query labels",
+      "raw": "evidence/raw/retrieval_runs.json",
+      "reproduce": "python scripts/run_retrieval_evidence.py --skip-local-embed",
+      "resume_sentence": "在 100 条独立标注查询、500 条记忆且 90% 噪声、3 个固定种子的离线实验中，相比 FTS5，Product 检索将 Recall@5 从 70.19% 提升到 73.52%（+3.33pp），NDCG@5 从 61.90% 提升到 63.70%（+1.80pp）。",
+      "limitations": [
+        "The dataset is synthetic and manually labeled, not real user traffic.",
+        "At 100 memories Product regressed versus FTS5: Recall@5 -3.89pp and NDCG@5 -1.73pp.",
+        "P50 latency increased from 2.56ms to 194.17ms in the 500-memory condition.",
+        "Both baselines produced results on 90% of no-answer negatives.",
+        "The local embedding baseline could not run because installed Transformers requires a Torch module absent from this environment."
+      ],
+      "forbidden_expansion": "Do not claim real-user quality, universal retrieval improvement, embedding superiority, low false-positive rate, or latency improvement."
+    },
+    {
+      "id": "memory-hard-forget-cross-surface-v1",
+      "tier": "A/B",
+      "metric": "Observed complete hard-forget pass rate across persisted and retrieval surfaces",
+      "baseline": "Same records before deletion were retrievable and had embedding-cache and retrieval-event entries",
+      "current": "After Product hard forget, content-level proof and independent absence checks",
+      "result": {
+        "passed_cases": 30,
+        "total_cases": 30,
+        "observed_pass_rate": 1.0
+      },
+      "sample": "10 uniquely marked memories for each of 3 fixed seeds",
+      "repetitions": "30 independent delete cases",
+      "mode": "offline synthetic; real SQLite/FTS/Product deletion paths; deterministic fake embedding used only to populate the cache surface",
+      "raw": "evidence/raw/hard_forget_runs.json",
+      "reproduce": "python scripts/run_hard_forget_evidence.py",
+      "resume_sentence": "在 3 个固定种子、30 条唯一记忆的离线删除实验中，Hard Forget 30/30 完成内容级删除证明，并通过 SQLite、FTS、Product 检索、embedding 缓存与检索事件清理验证。",
+      "limitations": [
+        "30/30 is the observed sample result, not a guarantee of a 100% population reliability rate.",
+        "The embedding provider is fake and proves cache cleanup only, not semantic embedding quality.",
+        "The experiment is local and does not cover remote replicas or backups outside the garden directory."
+      ],
+      "forbidden_expansion": "Do not claim production-wide erasure, remote-provider deletion, cryptographic erasure, or semantic embedding quality."
+    }
+  ],
+  "not_approved": [
+    "Small-scale Product retrieval result because it regressed against FTS5.",
+    "Embedding comparison because the real local provider did not initialize.",
+    "Mutation score as a resume metric because only four targeted mutants were evaluated.",
+    "Coverage as a standalone resume metric because it has no before/after baseline."
+  ]
+}

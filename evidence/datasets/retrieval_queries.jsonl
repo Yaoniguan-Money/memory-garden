@@ -1,0 +1,100 @@
+{"query_id":"mq001","query":"用户日常开发最偏好的两种编程语言是什么？","relevant_ids":["bench-gold-101"],"subset":"direct"}
+{"query_id":"mq002","query":"写项目文档时，内容应该追求怎样的详略程度？","relevant_ids":["bench-gold-102"],"subset":"direct"}
+{"query_id":"mq003","query":"定位代码故障时，相关测试和全量测试的执行顺序是什么？","relevant_ids":["bench-gold-103"],"subset":"direct"}
+{"query_id":"mq004","query":"界面主题和信息密度应采用什么偏好？","relevant_ids":["bench-gold-104"],"subset":"direct"}
+{"query_id":"mq005","query":"Atlas 的发布说明必须写入哪项恢复信息？","relevant_ids":["bench-gold-201"],"subset":"direct"}
+{"query_id":"mq006","query":"向 Atlas 客户说明变更时，风险和收益哪个先写？","relevant_ids":["bench-gold-202"],"subset":"direct"}
+{"query_id":"mq007","query":"Atlas 数据能否直接提交给外部模型处理？","relevant_ids":["bench-gold-203","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-203":3,"bench-gold-402":2}}
+{"query_id":"mq008","query":"Zephyr 上线清单需要覆盖哪两个业务事项？","relevant_ids":["bench-gold-301"],"subset":"direct"}
+{"query_id":"mq009","query":"Zephyr 的客户影响说明需要列出什么粒度的信息？","relevant_ids":["bench-gold-302"],"subset":"direct"}
+{"query_id":"mq010","query":"实现一个功能时，代码、补测和全量验证应如何排序？","relevant_ids":["bench-gold-401"],"subset":"direct"}
+{"query_id":"mq011","query":"哪些凭据和认证信息禁止在回答中泄露？","relevant_ids":["bench-gold-402"],"subset":"boundary"}
+{"query_id":"mq012","query":"用户的职业角色以及关注的软件阶段是什么？","relevant_ids":["bench-gold-501"],"subset":"direct"}
+{"query_id":"mq013","query":"哪个指标用于衡量排序质量，它的理想方向是什么？","relevant_ids":["bench-gold-601"],"subset":"direct"}
+{"query_id":"mq014","query":"哪个项目仍记录着旧版发布流程？","relevant_ids":["bench-gold-701"],"subset":"direct"}
+{"query_id":"mq015","query":"哪条临时记录提到发布流程以后可能调整？","relevant_ids":["bench-gold-801"],"subset":"direct"}
+{"query_id":"mq016","query":"我要新建一个 Python 服务，选型时应参考哪条长期偏好？","relevant_ids":["bench-gold-101"],"subset":"scenario"}
+{"query_id":"mq017","query":"一份状态更新写得很长，应该依据什么偏好压缩内容？","relevant_ids":["bench-gold-102"],"subset":"scenario"}
+{"query_id":"mq018","query":"修复单个失败用例后，是立即跑全套还是先验证最小范围？","relevant_ids":["bench-gold-103"],"subset":"scenario"}
+{"query_id":"mq019","query":"设计内部控制台时，浅色宽松布局是否符合用户习惯？","relevant_ids":["bench-gold-104"],"subset":"scenario"}
+{"query_id":"mq020","query":"Atlas 版本公告缺少回退办法，发布前应补哪条项目要求？","relevant_ids":["bench-gold-201"],"subset":"scenario"}
+{"query_id":"mq021","query":"Atlas 邮件先宣传收益、最后才写风险，这个顺序需要调整吗？","relevant_ids":["bench-gold-202"],"subset":"scenario"}
+{"query_id":"mq022","query":"准备把 Atlas 客户原始数据发给云端 AI 时，应由哪条规则阻止？","relevant_ids":["bench-gold-203","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-203":3,"bench-gold-402":2}}
+{"query_id":"mq023","query":"Zephyr 发布负责人只检查技术回滚，还遗漏了什么客户侧事项？","relevant_ids":["bench-gold-301"],"subset":"scenario"}
+{"query_id":"mq024","query":"Zephyr 影响公告只写整体受影响，是否还应拆到具体模块？","relevant_ids":["bench-gold-302"],"subset":"scenario"}
+{"query_id":"mq025","query":"功能代码刚完成但没有回归测试，下一步应做什么？","relevant_ids":["bench-gold-401"],"subset":"scenario"}
+{"query_id":"mq026","query":"日志里出现 password 和 token 时，回答前应依据什么边界处理？","relevant_ids":["bench-gold-402"],"subset":"boundary"}
+{"query_id":"mq027","query":"为开源 beta 设计质量门槛时，哪条身份信息最相关？","relevant_ids":["bench-gold-501"],"subset":"scenario"}
+{"query_id":"mq028","query":"比较两个排序器时，应该使用哪条记忆解释 NDCG？","relevant_ids":["bench-gold-601"],"subset":"scenario"}
+{"query_id":"mq029","query":"当前发布方案和旧流程冲突时，哪条记录应被视为 Legacy 上下文？","relevant_ids":["bench-gold-701"],"subset":"conflict"}
+{"query_id":"mq030","query":"一场临时会议的设想能否直接覆盖稳定发布规则？","relevant_ids":["bench-gold-801","bench-gold-701"],"subset":"conflict","relevance_scores":{"bench-gold-801":3,"bench-gold-701":2}}
+{"query_id":"mq031","query":"开发工具链选型与界面主题是两类什么用户偏好？","relevant_ids":["bench-gold-101","bench-gold-104"],"subset":"cross","relevance_scores":{"bench-gold-101":3,"bench-gold-104":3}}
+{"query_id":"mq032","query":"准备一份简洁的调试报告时，应同时参考哪些写作和验证习惯？","relevant_ids":["bench-gold-102","bench-gold-103"],"subset":"cross","relevance_scores":{"bench-gold-102":3,"bench-gold-103":3}}
+{"query_id":"mq033","query":"Atlas 发布沟通要同时包含回滚、风险和收益，应查哪两条记录？","relevant_ids":["bench-gold-201","bench-gold-202"],"subset":"cross","relevance_scores":{"bench-gold-201":3,"bench-gold-202":3}}
+{"query_id":"mq034","query":"Atlas 外部沟通既要讲风险又不能外发敏感数据，哪些约束共同适用？","relevant_ids":["bench-gold-202","bench-gold-203","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-203":3,"bench-gold-402":3,"bench-gold-202":2}}
+{"query_id":"mq035","query":"Zephyr 发布文档中的客户影响部分应由哪两条记忆共同指导？","relevant_ids":["bench-gold-301","bench-gold-302"],"subset":"cross","relevance_scores":{"bench-gold-301":3,"bench-gold-302":3}}
+{"query_id":"mq036","query":"完成实现并准备发布时，测试流程与发布回滚分别参考什么？","relevant_ids":["bench-gold-401","bench-gold-201"],"subset":"cross","relevance_scores":{"bench-gold-401":3,"bench-gold-201":2}}
+{"query_id":"mq037","query":"处理含 API key 的调试失败时，哪两条记忆分别约束排查顺序和保密？","relevant_ids":["bench-gold-103","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-103":3,"bench-gold-402":3}}
+{"query_id":"mq038","query":"面向开发者解释检索排序时，应结合哪条身份和哪条评估概念？","relevant_ids":["bench-gold-501","bench-gold-601"],"subset":"cross","relevance_scores":{"bench-gold-501":2,"bench-gold-601":3}}
+{"query_id":"mq039","query":"旧发布规范与临时变更传闻同时出现时，哪些记录构成冲突上下文？","relevant_ids":["bench-gold-701","bench-gold-801"],"subset":"conflict","relevance_scores":{"bench-gold-701":3,"bench-gold-801":2}}
+{"query_id":"mq040","query":"Atlas 和 Zephyr 的发布要求有哪些可用于回滚核对的记录？","relevant_ids":["bench-gold-201","bench-gold-301"],"subset":"cross","relevance_scores":{"bench-gold-201":3,"bench-gold-301":3}}
+{"query_id":"mq041","query":"Atlas 与 Zephyr 的客户沟通要求分别存在哪两条项目记忆中？","relevant_ids":["bench-gold-202","bench-gold-302"],"subset":"cross","relevance_scores":{"bench-gold-202":3,"bench-gold-302":3}}
+{"query_id":"mq042","query":"用户偏好的稳定工具链和开源 beta 关注点来自哪些不同类型的记忆？","relevant_ids":["bench-gold-101","bench-gold-501"],"subset":"cross","relevance_scores":{"bench-gold-101":3,"bench-gold-501":2}}
+{"query_id":"mq043","query":"写一份检索评估报告时，简洁写作与 NDCG 解释应分别查哪里？","relevant_ids":["bench-gold-102","bench-gold-601"],"subset":"cross","relevance_scores":{"bench-gold-102":2,"bench-gold-601":3}}
+{"query_id":"mq044","query":"实现任务结束后，最小相关测试与全量测试的要求来自哪两条流程记忆？","relevant_ids":["bench-gold-103","bench-gold-401"],"subset":"cross","relevance_scores":{"bench-gold-103":3,"bench-gold-401":3}}
+{"query_id":"mq045","query":"构建紧凑的发布看板时，界面偏好和 Zephyr 发布项分别参考什么？","relevant_ids":["bench-gold-104","bench-gold-301"],"subset":"cross","relevance_scores":{"bench-gold-104":2,"bench-gold-301":3}}
+{"query_id":"mq046","query":"敏感客户数据、API key 和密码是否属于同一外发风险范围？","relevant_ids":["bench-gold-203","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-203":3,"bench-gold-402":3}}
+{"query_id":"mq047","query":"Atlas 的专属数据边界与通用凭据边界有什么对应记录？","relevant_ids":["bench-gold-203","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-203":3,"bench-gold-402":3}}
+{"query_id":"mq048","query":"会议中说流程可能变化，但旧项目仍有既定流程，回答时要展示哪些冲突来源？","relevant_ids":["bench-gold-801","bench-gold-701"],"subset":"conflict","relevance_scores":{"bench-gold-801":3,"bench-gold-701":3}}
+{"query_id":"mq049","query":"不能把 Zephyr 的发布清单误当成 Atlas 规则，两个项目边界由哪些记录区分？","relevant_ids":["bench-gold-301","bench-gold-201"],"subset":"boundary","relevance_scores":{"bench-gold-301":3,"bench-gold-201":3}}
+{"query_id":"mq050","query":"客户影响模块清单是 Zephyr 要求，风险先于收益是 Atlas 要求，应分别命中什么？","relevant_ids":["bench-gold-302","bench-gold-202"],"subset":"boundary","relevance_scores":{"bench-gold-302":3,"bench-gold-202":3}}
+{"query_id":"mq051","query":"用户偏好 Python 并不代表可以泄露 token，回答应同时保留哪些记忆边界？","relevant_ids":["bench-gold-101","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-101":2,"bench-gold-402":3}}
+{"query_id":"mq052","query":"简洁写作偏好是否允许省略 Atlas 必须的回滚步骤？","relevant_ids":["bench-gold-102","bench-gold-201"],"subset":"conflict","relevance_scores":{"bench-gold-201":3,"bench-gold-102":2}}
+{"query_id":"mq053","query":"紧凑界面偏好能否替代 Zephyr 受影响模块的完整列举？","relevant_ids":["bench-gold-104","bench-gold-302"],"subset":"conflict","relevance_scores":{"bench-gold-302":3,"bench-gold-104":1}}
+{"query_id":"mq054","query":"临时会议纪要与长期稳定偏好冲突时，哪些来源的稳定性不同？","relevant_ids":["bench-gold-801","bench-gold-101"],"subset":"conflict","relevance_scores":{"bench-gold-101":3,"bench-gold-801":2}}
+{"query_id":"mq055","query":"旧版流程被标记为 Legacy 时，是否还应与当前实现流程混为一谈？","relevant_ids":["bench-gold-701","bench-gold-401"],"subset":"conflict","relevance_scores":{"bench-gold-701":3,"bench-gold-401":2}}
+{"query_id":"mq056","query":"评估排序质量的概念不能替代实际发布步骤，分别对应哪些记忆？","relevant_ids":["bench-gold-601","bench-gold-301"],"subset":"boundary","relevance_scores":{"bench-gold-601":2,"bench-gold-301":3}}
+{"query_id":"mq057","query":"开发者身份信息是否能授权系统向外部模型发送 Atlas 客户数据？","relevant_ids":["bench-gold-501","bench-gold-203"],"subset":"conflict","relevance_scores":{"bench-gold-203":3,"bench-gold-501":1}}
+{"query_id":"mq058","query":"全量测试要求与不能泄露密码的安全要求需要同时满足时，查哪两条？","relevant_ids":["bench-gold-401","bench-gold-402"],"subset":"boundary","relevance_scores":{"bench-gold-401":3,"bench-gold-402":3}}
+{"query_id":"mq059","query":"Atlas 回滚规则和 Zephyr 回滚规则相似，但项目作用域如何分别追溯？","relevant_ids":["bench-gold-201","bench-gold-301"],"subset":"boundary","relevance_scores":{"bench-gold-201":3,"bench-gold-301":3}}
+{"query_id":"mq060","query":"把旧流程当最新结论前，应该同时检查哪条旧记录和哪条变化信号？","relevant_ids":["bench-gold-701","bench-gold-801"],"subset":"conflict","relevance_scores":{"bench-gold-701":3,"bench-gold-801":3}}
+{"query_id":"mq061","query":"技术方案指定 Java 时，用户的语言偏好能提供什么反向提醒？","relevant_ids":["bench-gold-101"],"subset":"edge"}
+{"query_id":"mq062","query":"文档必须完整列出风险时，怎样兼顾用户的简洁写作偏好？","relevant_ids":["bench-gold-102","bench-gold-202"],"subset":"edge","relevance_scores":{"bench-gold-202":3,"bench-gold-102":2}}
+{"query_id":"mq063","query":"一个测试持续失败，重复跑全套之前应遵循哪种最小化排查策略？","relevant_ids":["bench-gold-103"],"subset":"edge"}
+{"query_id":"mq064","query":"移动端空间有限时，哪项布局偏好支持减少视觉留白？","relevant_ids":["bench-gold-104"],"subset":"edge"}
+{"query_id":"mq065","query":"Atlas 紧急热修复也需要在公告中保留什么可逆性说明？","relevant_ids":["bench-gold-201"],"subset":"edge"}
+{"query_id":"mq066","query":"Atlas 没有明显收益但存在高风险时，沟通结构仍应先写什么？","relevant_ids":["bench-gold-202"],"subset":"edge"}
+{"query_id":"mq067","query":"对 Atlas 数据做匿名化之前，哪条边界仍要求谨慎对待外部模型？","relevant_ids":["bench-gold-203"],"subset":"edge"}
+{"query_id":"mq068","query":"Zephyr 的变更没有客户影响时，清单中仍应明确检查哪项？","relevant_ids":["bench-gold-301"],"subset":"edge"}
+{"query_id":"mq069","query":"Zephyr 只影响一个模块时，客户说明是否仍需点名该模块？","relevant_ids":["bench-gold-302"],"subset":"edge"}
+{"query_id":"mq070","query":"只改了测试代码时，完成任务前是否仍有全量验证要求？","relevant_ids":["bench-gold-401"],"subset":"edge"}
+{"query_id":"mq071","query":"错误栈中的 bearer token 应归入哪类禁止输出的信息？","relevant_ids":["bench-gold-402"],"subset":"edge"}
+{"query_id":"mq072","query":"选择公开 beta 的验收标准时，为何用户身份上下文相关？","relevant_ids":["bench-gold-501"],"subset":"edge"}
+{"query_id":"mq073","query":"NDCG 等于一意味着排序结果处于什么状态？","relevant_ids":["bench-gold-601"],"subset":"edge"}
+{"query_id":"mq074","query":"Legacy 流程存在是否意味着所有新项目都应该继续采用它？","relevant_ids":["bench-gold-701"],"subset":"edge"}
+{"query_id":"mq075","query":"一次性会议中的流程猜测应被当作稳定事实还是临时线索？","relevant_ids":["bench-gold-801"],"subset":"edge"}
+{"query_id":"mq076","query":"要生成符合用户习惯的 TypeScript 管理台，应同时考虑哪些语言和界面偏好？","relevant_ids":["bench-gold-101","bench-gold-104"],"subset":"application","relevance_scores":{"bench-gold-101":3,"bench-gold-104":3}}
+{"query_id":"mq077","query":"故障复盘既要简明又要说明测试过程，相关记忆是哪两条？","relevant_ids":["bench-gold-102","bench-gold-103"],"subset":"application","relevance_scores":{"bench-gold-102":3,"bench-gold-103":3}}
+{"query_id":"mq078","query":"Atlas 发布包同时缺少风险排序和回滚步骤，应补齐哪些记录要求？","relevant_ids":["bench-gold-201","bench-gold-202"],"subset":"application","relevance_scores":{"bench-gold-201":3,"bench-gold-202":3}}
+{"query_id":"mq079","query":"审核 Atlas 的 AI 数据流时，项目专属边界和通用秘密保护应如何追溯？","relevant_ids":["bench-gold-203","bench-gold-402"],"subset":"application","relevance_scores":{"bench-gold-203":3,"bench-gold-402":3}}
+{"query_id":"mq080","query":"Zephyr 上线通知要同时说明客户影响和恢复方案，应检索哪些条目？","relevant_ids":["bench-gold-301","bench-gold-302"],"subset":"application","relevance_scores":{"bench-gold-301":3,"bench-gold-302":3}}
+{"query_id":"mq081","query":"代码变更涉及密码处理时，实现流程和安全红线分别是什么？","relevant_ids":["bench-gold-401","bench-gold-402"],"subset":"application","relevance_scores":{"bench-gold-401":3,"bench-gold-402":3}}
+{"query_id":"mq082","query":"给开发者展示排序实验时，用户背景和 NDCG 定义各提供什么上下文？","relevant_ids":["bench-gold-501","bench-gold-601"],"subset":"application","relevance_scores":{"bench-gold-501":2,"bench-gold-601":3}}
+{"query_id":"mq083","query":"迁移旧发布流程前，哪两条记录提示既有规范与潜在变化？","relevant_ids":["bench-gold-701","bench-gold-801"],"subset":"application","relevance_scores":{"bench-gold-701":3,"bench-gold-801":3}}
+{"query_id":"mq084","query":"同时发布 Atlas 和 Zephyr 时，回滚相关要求应从哪些项目记录分别取证？","relevant_ids":["bench-gold-201","bench-gold-301"],"subset":"application","relevance_scores":{"bench-gold-201":3,"bench-gold-301":3}}
+{"query_id":"mq085","query":"为两个项目分别撰写客户公告时，Atlas 的风险顺序和 Zephyr 的模块清单各在哪里？","relevant_ids":["bench-gold-202","bench-gold-302"],"subset":"application","relevance_scores":{"bench-gold-202":3,"bench-gold-302":3}}
+{"query_id":"mq086","query":"做发布工具时采用 Python 且界面紧凑，相关个人偏好有哪些？","relevant_ids":["bench-gold-101","bench-gold-104"],"subset":"application","relevance_scores":{"bench-gold-101":3,"bench-gold-104":3}}
+{"query_id":"mq087","query":"写测试质量报告时，完整但简洁的表达与 NDCG 排序指标分别参考什么？","relevant_ids":["bench-gold-102","bench-gold-601"],"subset":"application","relevance_scores":{"bench-gold-102":2,"bench-gold-601":3}}
+{"query_id":"mq088","query":"调试 Atlas 发布失败时，测试排查顺序和回滚文档要求来自哪里？","relevant_ids":["bench-gold-103","bench-gold-201"],"subset":"application","relevance_scores":{"bench-gold-103":3,"bench-gold-201":3}}
+{"query_id":"mq089","query":"开源 beta 的 Zephyr 发布评审需要结合哪些用户关注点和项目清单？","relevant_ids":["bench-gold-501","bench-gold-301"],"subset":"application","relevance_scores":{"bench-gold-501":2,"bench-gold-301":3}}
+{"query_id":"mq090","query":"旧流程文档包含敏感 token 时，检索答案需要同时考虑哪些历史与安全记录？","relevant_ids":["bench-gold-701","bench-gold-402"],"subset":"application","relevance_scores":{"bench-gold-701":2,"bench-gold-402":3}}
+{"query_id":"mq091","query":"团队午餐预算是多少？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq092","query":"生产数据库的主机地址是什么？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq093","query":"用户最喜欢的音乐专辑是哪一张？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq094","query":"下周三会议的具体开始时间是什么？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq095","query":"移动应用支持哪些 Android 版本？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq096","query":"公司法定代表人的姓名是什么？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq097","query":"线上集群当前有多少台服务器？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq098","query":"用户的家庭住址在哪里？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq099","query":"上个季度的销售收入是多少？","relevant_ids":[],"subset":"negative"}
+{"query_id":"mq100","query":"客服热线电话号码是什么？","relevant_ids":[],"subset":"negative"}

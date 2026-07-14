@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "seeds": [104729, 130363, 155921],
+  "cases_per_seed": 10,
+  "embedding_provider": "FakeEmbeddingProvider",
+  "embedding_note": "The deterministic fake provider exercises cache deletion only; it is not evidence of semantic retrieval quality."
+}

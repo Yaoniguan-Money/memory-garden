@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "<user-home>\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+  "sqlite": "3.45.1",
+  "packages": {
+    "coverage": "7.14.0",
+    "jieba": "0.42.1",
+    "pydantic": "2.9.2",
+    "pytest": "8.3.3",
+    "pytest-cov": "7.1.0",
+    "sentence-transformers": "5.5.1",
+    "torch": "2.4.1",
+    "transformers": "5.9.0"
+  },
+  "environment_flags": {
+    "HF_HUB_OFFLINE": null,
+    "TRANSFORMERS_OFFLINE": null
+  },
+  "repository_vcs": "No .git metadata present in the supplied project directory."
+}
