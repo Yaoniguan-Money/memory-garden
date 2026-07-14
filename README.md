@@ -11,6 +11,8 @@ It helps agents resist long-context attention dilution and context-window forget
 
 [中文说明](README_中文.md) | [Docs](docs/index.md) | [Quickstart](docs/quickstart.md)
 
+测试、Benchmark、原始结果与复现方式见 ./evidence/README.md。
+
 Public naming stays consistent:
 
 - Project display name: `记忆花园 Memory Garden`
